@@ -69,3 +69,12 @@ int main(const int argc, const char **argv)
     return 0;
 }
 ```
+
+## Build samples
+
+The samples can be compiled using [CMake](https://cmake.org/) (3.10+):
+
+1. Create the cache directory: `mkdir build`
+1. Prepare the build environment: `cmake -B build .`
+1. Build the project: `cmake --build build`
+1. Run a sample: `./build/Debug/basic-sample -h`
