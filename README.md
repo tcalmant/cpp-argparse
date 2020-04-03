@@ -49,7 +49,16 @@ int main(const int argc, const char **argv)
             return 0;
         }
 
-        cout << "Conf file: " << parser.get("conf").get_value() << endl;
+        auto conf_arg = parser.get("conf");
+        if (conf_arg.is_set())
+        {
+            cout << "Conf file: " << conf_arg.get_value() << endl;
+        }
+        else
+        {
+            cout << "No configuration given." << endl;
+        }
+
         if(parser.get("force").is_set())
         {
             cout << "HELLO WORLD" << endl;
