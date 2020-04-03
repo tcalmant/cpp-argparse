@@ -1,30 +1,6 @@
-# cpp-mini-argparse
-
-A small library to parse command line arguments in C++, without external
-dependencies besides the standard library.
-
-This was made in a hurry for a specific project, to avoid license issues.
-
-It supports:
-* Flag and store (one value) arguments
-* A short and a long alias for an argument
-* A basic usage print
-
-It requires:
-* A C++11 compiler
-* The C++ standard library (`iostream`, `list`, `map` and `string`)
-
-**Note:** This is not a *production-ready* library, but it can be useful for
-some developments.
-
-
-## Sample usage
-
-This snippet can be found in the `sample` folder.
-
-```cpp
 #include <iostream>
-#include "argparse/argparse.hpp"
+
+#include "../argparse/argparse.hpp"
 
 using namespace argparse;
 using namespace std;
@@ -68,4 +44,3 @@ int main(const int argc, const char **argv)
 
     return 0;
 }
-```
