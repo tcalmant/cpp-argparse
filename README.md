@@ -81,9 +81,11 @@ int main(const int argc, const char **argv)
 
 ## Build samples
 
-The samples can be compiled using [CMake](https://cmake.org/) (3.10+):
+The samples can be compiled using [CMake](https://cmake.org/) (3.5+):
 
 1. Create the cache directory: `mkdir build`
-1. Prepare the build environment: `cmake -B build .`
-1. Build the project: `cmake --build build`
-1. Run a sample: `./build/Debug/basic-sample -h`
+1. Move inside it `cd build`
+1. Prepare the build environment: `cmake ..`
+1. Build the project: `cmake --build .`
+1. Run a sample: `./basic-sample -h` or `./Debug/basic-sample -h` according to
+the CMake version and OS.
