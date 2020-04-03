@@ -94,7 +94,7 @@ public:
         std::string const &id,
         std::string const &description,
         ArgumentMode const &mode = ArgumentMode::FLAG,
-        char *default_value = nullptr);
+        const char *default_value = nullptr);
 
     /**
      * Adds an alias to this argument (for the usage message only)
@@ -258,7 +258,7 @@ public:
         std::string const &long_name,
         std::string const &description,
         ArgumentMode const &mode = ArgumentMode::FLAG,
-        char *default_value = nullptr);
+        const char *default_value = nullptr);
 
     /**
      * Parses the given arguments

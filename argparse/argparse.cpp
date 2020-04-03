@@ -33,10 +33,10 @@ ArgumentDescription::ArgumentDescription(
     std::string const &id,
     std::string const &description,
     ArgumentMode const &mode,
-    char *default_value) : m_id(id),
-                           m_mode(mode),
-                           m_description(description),
-                           m_default(default_value)
+    const char *default_value) : m_id(id),
+                                 m_mode(mode),
+                                 m_description(description),
+                                 m_default(default_value)
 {
 }
 
@@ -78,7 +78,7 @@ void ArgumentParser::add_argument(
     std::string const &long_name,
     std::string const &description,
     ArgumentMode const &mode,
-    char *default_value)
+    const char *default_value)
 {
     if (!short_name.empty() && m_aliases.find(short_name) != m_aliases.end())
     {
